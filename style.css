@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "open sans", sans-serif;
+}
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+}
+header h4
+{
+    position: relative;
+    left: 0%;
+    bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    top: 20px;
+    z-index: 1;
+}
+.intro{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+.logo-header
+{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.logo
+{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active
+{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade
+{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+.navigation
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+.navigation .links
+{
+    position: absolute;
+    bottom: 0px;
+    padding: 20px 25px;
+}
+.navigation .links a
+{
+    color: #eee;
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+    margin: 20px 0px;
+    padding: 0px 10px;
+    border-left: 5px solid transparent;
+    transition:all 300ms ease-in-out;
+}
+.navigation .links a:hover
+{
+    border-left: 5px solid #eee;
+}
+
+.content
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    min-height: 150vh;
+    background: #eee;
+    padding: 100px 30px;
+    box-sizing: border-box;
+    transform-origin: top left;
+    transform: rotate(0deg);
+    transition: all 500ms ease-in-out;
+}
+.ham-btn
+{
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    background: black;
+    z-index: 2;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.ham-btn span
+{
+    width: 50%;
+    height: 3px;
+    background: #eee;
+    position: absolute;
+    top: 50%;
+     left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 300ms ease-in-out;
+}
+.ham-btn span:nth-child(1)
+{
+    top: 30%;
+}
+.ham-btn span:nth-child(2)
+{
+    top: 70%;
+}
+body.activeNav
+{
+    overflow: hidden;
+}
+
+body.activeNav .content
+{
+    transform: rotate(-32deg);
+}
+.body.activeNav .ham-btn span:nth-child(1)
+{
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.body.activeNav .ham-btn span:nth-child(2)
+{
+    display: none;
+    
+}
+
+
+
+
+
+
+
+
+
